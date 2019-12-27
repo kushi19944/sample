@@ -10,6 +10,7 @@ import RPA from "ts-rpa";
     );
     await RPA.WebBrowser.mouseClick(element);
     await RPA.sleep(3000);
+    await RPA.WebBrowser.takeScreenshot();
   } catch (error) {
     RPA.SystemLogger.error(error);
   } finally {
