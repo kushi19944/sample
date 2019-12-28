@@ -1,6 +1,6 @@
 import RPA from "ts-rpa";
 require('dotenv').config();
-const test = process.env.PW;
+const test = process.env.CyNumber;
 RPA.Logger.info(test);
 
 (async () => {
