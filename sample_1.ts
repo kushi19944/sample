@@ -8,7 +8,7 @@ import RPA from "ts-rpa";
     if(text == "ストア"){
      await RPA.WebBrowser.mouseClick(ele); 
     }
-    await RPA.sleep(15000);
+    await RPA.sleep(5000);
     await RPA.WebBrowser.takeScreenshot();
   } catch (error) {
     RPA.SystemLogger.error(error);
