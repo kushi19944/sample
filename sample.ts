@@ -1,4 +1,5 @@
 import RPA from "ts-rpa";
+require('dotenv').config();
 const test = process.env.PW;
 RPA.Logger.info(test);
 
