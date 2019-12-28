@@ -1,9 +1,11 @@
 import RPA from "ts-rpa";
+const test = process.env.PW;
+RPA.Logger.info(test);
 
 (async () => {
   try {
-    await RPA.WebBrowser.get("https://github.com/kushi19944/sample/");
-    await RPA.sleep(5000);
+    await RPA.WebBrowser.get("https://www.google.com/");
+    await RPA.sleep(15000);
     await RPA.WebBrowser.takeScreenshot();
   } catch (error) {
     RPA.SystemLogger.error(error);
