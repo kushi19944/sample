@@ -6,8 +6,8 @@ var name2 = 'sample/2.jpg'
 var name2_1 = 'sample/2_1.jpg'
 
 
-
-imghash
+asyns function test(){
+  imghash
   .hash(name1)
   .then((hash) => {
     await console.log(name1 + ' '+ hash); // 'f884c4d8d1193c07'
@@ -57,4 +57,7 @@ await Promise
     } else {
       console.log('Images are NOT similar');
     }
-  });
+}
+test();
+
+
