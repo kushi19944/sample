@@ -33,9 +33,28 @@ imghash
     console.log(name2_1+' '+hash); // '1000100010000010'
   });
 
-const dist = leven(name1, name1_1);
-console.log(dist);
 
-const dist2 = leven(name2, name2_1);
-console.log(dist2);
+Promise
+  .all([name1, name1_1])
+  .then((results) => {
+    const dist = leven(results[0], results[1]);
+    console.log(`Distance between images is: ${dist}`);
+    if (dist <= 12) {
+      console.log('Images are similar');
+    } else {
+      console.log('Images are NOT similar');
+    }
+  });
 
+
+Promise
+  .all([name2, name2_1])
+  .then((results) => {
+    const dist = leven(results[0], results[1]);
+    console.log(`Distance between images is: ${dist}`);
+    if (dist <= 12) {
+      console.log('Images are similar');
+    } else {
+      console.log('Images are NOT similar');
+    }
+  });
