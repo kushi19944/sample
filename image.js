@@ -6,7 +6,7 @@ var name2 = 'sample/2.jpg'
 var name2_1 = 'sample/2_1.jpg'
 
 
-asyns function test(){
+async function test(){
   imghash
   .hash(name1)
   .then((hash) => {
