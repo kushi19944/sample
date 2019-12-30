@@ -19,6 +19,7 @@ imghash
     console.log(name1_1 + ' '+ hash); // 'f884c4d8d1193c07'
   });
 
+
 imghash
   .hash(name2)
   .then((hash) => {
@@ -31,4 +32,10 @@ imghash
   .then((hash) => {
     console.log(name2_1+' '+hash); // '1000100010000010'
   });
+
+const dist = leven(name1, name1_1);
+console.log(dist);
+
+const dist2 = leven(name2, name2_1);
+console.log(dist2);
 
