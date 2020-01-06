@@ -166,8 +166,9 @@ async function Youtube2ndLogin(Account){
 
 
 async function TitleSearch(TargetTitle){
-    const SearchInput = await RPA.WebBrowser.wait(RPA.WebBrowser.Until.elementLocated({id:'query-input'}),15000);
+    await RPA.sleep(1000);
     await RPA.WebBrowser.takeScreenshot();
+    const SearchInput = await RPA.WebBrowser.wait(RPA.WebBrowser.Until.elementLocated({id:'query-input'}),15000);
     await RPA.sleep(1000);
     await RPA.WebBrowser.sendKeys(SearchInput,[TargetTitle]);
     await RPA.sleep(2000);
