@@ -86,7 +86,7 @@ async function AccountSelect(Account1,Account2){
 
 async function YoutubeLogin(Account){
     await RPA.WebBrowser.get(Account[3]);
-    await RPA.sleep(1000);
+    await RPA.sleep(5000);
     const GoogleLoginID = await RPA.WebBrowser.wait(RPA.WebBrowser.Until.elementLocated({xpath:'//*[@id="identifierId"]'}),10000);
     await RPA.WebBrowser.sendKeys(GoogleLoginID,[`${Account[1]}`]);
     const NextButton = await RPA.WebBrowser.findElementByXPath('//*[@id="identifierNext"]');
@@ -102,7 +102,7 @@ async function YoutubeLogin(Account){
 async function Youtube2ndLogin(Account){
     // 別のアカウントに切り替えるためにログアウトする
     await RPA.WebBrowser.get("https://studio.youtube.com/channel/");
-    await RPA.sleep(1500);
+    await RPA.sleep(5000);
     const AccountButton = await RPA.WebBrowser.wait(RPA.WebBrowser.Until.elementLocated({id:'avatar-btn'}),10000);
     await RPA.WebBrowser.mouseClick(AccountButton);
     await RPA.sleep(500);
