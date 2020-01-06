@@ -2,6 +2,8 @@ import RPA from "ts-rpa";
 require('dotenv').config();
 const test = process.env.CyNumber;
 RPA.Logger.info(test);
+const test2 = process.env.Youtube_Card_Setting_SheetID;
+RPA.Logger.info(test2);
 
 (async () => {
   try {
