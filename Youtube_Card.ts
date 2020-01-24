@@ -995,7 +995,7 @@ async function CommentPost(CardData){
     // 固定するボタンをおす
     const KoteiApplyButton = await RPA.WebBrowser.wait(RPA.WebBrowser.Until.elementsLocated({className:'style-scope yt-button-renderer style-primary size-default'}),5000);
     await RPA.WebBrowser.mouseClick(KoteiApplyButton[0]);
-    await RPA.WebBrowser.takeScreenshot();
+    //await RPA.WebBrowser.takeScreenshot();
     await RPA.sleep(2000);
     // タブが２つ以上あれば1以外消す
     const TabClose = await RPA.WebBrowser.getAllWindowHandles()
