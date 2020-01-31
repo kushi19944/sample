@@ -22,7 +22,7 @@ async function Start() {
   // Slackの通知用フラッグ goodなら完了報告。errorならエラー報告を行う
   const WorkStatus = ['good'];
   try {
-    await SlackStart();
+    //await SlackStart();
     await AJALogin();
     while (0 == 0) {
       LoopFlag[0] = 'false';
