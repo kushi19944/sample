@@ -72,7 +72,7 @@ async function Start() {
   }
 }
 
-//Start();
+Start();
 
 async function SlackStart() {
   // 作業開始時にSlackへ通知する
