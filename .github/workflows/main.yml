@@ -1,0 +1,33 @@
+name: xbrowser
+
+on: [push]
+
+jobs:
+  e2e-ie:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: warrenbuckley/Setup-Nuget@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn install
+      - run: nuget install Selenium.WebDriver.IEDriver -Version 3.150.0
+      - run: node ss.js
+        env:
+          BROWSER: ie
+  e2e-safari:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn install
+      - name: Run safari driver
+        run: |
+          sudo safaridriver --enable
+          safaridriver -p 0 &
+      - run: node ss.js
+        env:
+          BROWSER: safari
